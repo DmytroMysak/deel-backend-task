@@ -1,6 +1,16 @@
 # DEEL BACKEND TASK
 
-  
+POSTMAN collection to check the API: https://www.getpostman.com/collections/2cd37f29402795c33716
+General scope of work:
+- update all dependencies (with current dependencies there is issue on linux due to sqlite3 binary)
+- refactor all structure (split models by file, routes, etc)
+- move all magic strings to constants
+- applied code style
+- created all API's
+- added simple logger
+- added simple validation
+- created different config (prod/dev)
+- created dockerfile + docker-compose
 
 💫 Welcome! 🎉
 

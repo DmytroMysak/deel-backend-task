@@ -1,12 +1,14 @@
+const config = require('./config');
 const app = require('./app');
+const logger = require('./helpers/logger');
 
-(async function init() {
+(async function main() {
   try {
-    app.listen(3001, () => {
-      console.log('Express App Listening on Port 3001');
+    app.listen(config.port, () => {
+      logger.info(`Express App Listening on Port ${config.port}`);
     });
   } catch (error) {
-    console.error(`An error occurred: ${JSON.stringify(error)}`);
+    logger.error(error, 'An error occurred during application start. Stopping application.');
     process.exit(1);
   }
 }());
